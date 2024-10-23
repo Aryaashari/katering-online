@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2>Login</h2>
+                                <h2>Daftar</h2>
                             </div>
                         </div>
                     </div>
@@ -48,23 +48,44 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_text text-center">
                             <div class="login_part_text_iner">
-                                <h2>Belum punya akun?</h2>
+                                <h2>Sudah punya akun?</h2>
                                 <p>There are advances being made in science and technology
                                     everyday, and a good example of this is the</p>
-                                <a href="{{ url('/register') }}" class="btn_3">Daftar</a>
+                                <a href="{{ url('/login') }}" class="btn_3">Masuk</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_form">
                             <div class="login_part_form_iner">
-                                <form class="row contact_form" action="{{ url('/login') }}" method="post"
+                                <form class="row contact_form" action="{{ url('/register') }}" method="post"
                                     novalidate="novalidate">
                                     @csrf
                                     <div class="col-md-12 form-group p_star">
+                                        <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                            id="name" name="name" placeholder="Nama" value="{{ old('name') }}">
+                                        @error('name')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+
+                                    </div>
+                                    <div class="col-md-12 form-group p_star">
                                         <input type="email" class="form-control @error('email') is-invalid @enderror"
-                                            id="email" name="email" placeholder="Email">
+                                            id="email" name="email" placeholder="Email" value="{{ old('email') }}">
                                         @error('email')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+
+                                    </div>
+
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="number" class="form-control @error('telp') is-invalid @enderror"
+                                            id="telp" name="telp" placeholder="Nomor telepon/WA" value="{{ old('telp') }}">
+                                        @error('telp')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -81,9 +102,20 @@
                                             </div>
                                         @enderror
                                     </div>
+
+                                    <div class="col-md-12 form-group p_star">
+                                        <input type="password"
+                                            class="form-control @error('password_confirmation') is-invalid @enderror"
+                                            name="password_confirmation" placeholder="Konfirmasi Password">
+                                        @error('password_confirmation')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
                                     <div class="col-md-12 form-group">
                                         <button type="submit" value="submit" class="btn_3">
-                                            Masuk
+                                            Daftar
                                         </button>
                                     </div>
                                 </form>

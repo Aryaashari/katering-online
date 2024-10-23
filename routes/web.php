@@ -21,6 +21,7 @@ Route::post('/transaction/notification', [PembayaranController::class, 'handleNo
 Route::get('/login', [AuthController::class, 'loginView'])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->middleware('guest');
 Route::get('/register', [AuthController::class, 'registerView'])->middleware('guest')->name('register');
+Route::post('/register', [AuthController::class, 'registered'])->middleware('guest')->name('register');
 
 Route::middleware('auth')->group(function() {
 
