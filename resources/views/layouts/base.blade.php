@@ -58,26 +58,30 @@
 
                                     @auth
                                         <li><a href="{{ url('/pesan/riwayat') }}">Riwayat Pesanan</a></li>
+                                        <li>
+                                            <form action="{{ url('/logout') }}" method="post">
+                                                @csrf
+                                                <a href="#" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                                            </form>
+                                        </li>
+
+                                        @role('admin')
+                                            <li>
+                                                <form action="{{ url('/admin') }}" method="get">
+                                                    @csrf
+                                                    <button type="submit" class="btn">Admin</button>
+                                                </form>
+                                            </li>
+                                        @endrole
+                                    @else
+                                        <li><a href="{{ url('/login') }}">Login</a></li>
                                     @endauth
+
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header Right -->
                         <div class="header-right">
-                            <ul>
-                                @auth
-                                    <li> 
-                                        <form action="{{ url('/logout') }}" method="post">
-                                            @csrf
-                                            <button type="submit" class="btn btn-sm btn-primary text-white">Logout</button>
-                                        </form>
-                                    </li>
-                                @else
-                                    <li>
-                                        <a href="{{ url('/login') }}" class="btn btn-sm btn-primary text-white">Login</a>
-                                    </li>
-                                @endauth
-                            </ul>
                         </div>
                     </div>
                     <!-- Mobile Menu -->
