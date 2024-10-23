@@ -66,10 +66,15 @@
                         <div class="header-right">
                             <ul>
                                 @auth
-                                    <li> <a class="btn btn-sm btn-primary text-white">Logout</a></li>
+                                    <li> 
+                                        <form action="{{ url('/logout') }}" method="post">
+                                            @csrf
+                                            <button type="submit" class="btn btn-sm btn-primary text-white">Logout</button>
+                                        </form>
+                                    </li>
                                 @else
                                     <li>
-                                        <a href="{{ url('/admin/login') }}" class="btn btn-sm btn-primary text-white">Login</a>
+                                        <a href="{{ url('/login') }}" class="btn btn-sm btn-primary text-white">Login</a>
                                     </li>
                                 @endauth
                             </ul>
