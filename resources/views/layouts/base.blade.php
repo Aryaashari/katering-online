@@ -45,50 +45,22 @@
         </div>
     </div>
     <!-- Preloader Start -->
-    <header>
+    <header style="margin-bottom:80px; background-color: white;">
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header header-sticky">
                 <div class="container-fluid">
-                    <div class="menu-wrapper">
+                    <div class="menu-wrapper" style="padding-top: 20px; padding-bottom:20px;">
                         <!-- Logo -->
-                        <div class="logo">
-                            <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/logo.png') }}"
-                                    alt=""></a>
-                        </div>
-                        <!-- Main-menu -->
-                        <div class="main-menu d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a href="{{ url('/') }}">Daftar Paket</a></li>
-
-                                    @auth
-                                        <li><a href="{{ url('/pesan/riwayat') }}">Riwayat Pesanan</a></li>
-                                        <li>
-                                            <form action="{{ url('/logout') }}" method="post">
-                                                @csrf
-                                                <a href="#"
-                                                    onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
-                                            </form>
-                                        </li>
-
-                                        @role('admin')
-                                            <li>
-                                                <form action="{{ url('/admin') }}" method="get">
-                                                    @csrf
-                                                    <button type="submit" class="btn">Admin</button>
-                                                </form>
-                                            </li>
-                                        @endrole
-                                    @else
-                                        <li><a href="{{ url('/login') }}">Login</a></li>
-                                    @endauth
-
-                                </ul>
-                            </nav>
+                        <div class="logo m-auto">
+                            <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/main-logo.png') }}"
+                                    alt="logo" width="120"></a>
                         </div>
                         <!-- Header Right -->
                         <div class="header-right">
+                            <ul>
+                                <li> <a href="{{ url('/login') }}"><span class="flaticon-user"></span></a></li>
+                            </ul>
                         </div>
                     </div>
                     <!-- Mobile Menu -->
@@ -109,58 +81,39 @@
         <div class="footer-area footer-padding">
             <div class="container">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+                    <div class="col-lg-4 col-md-5 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="{{ asset('assets/img/logo/logo2_footer.png') }}"
-                                            alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/img/logo/main-logo.png') }}"
+                                            alt="logo" width="120"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do
-                                            eiusmod tem.</p>
+                                        <p>Platform kolaborasi antara Trengginas Jaya dengan Kalorize untuk menyediakan platform yang dapat memenuhi seluruh kebutuhan mahasiswa di Telkom University</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                    <div class="col-lg-2 col-md-4 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Quick Links</h4>
+                                <h4>Navigasi</h4>
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="#"> Contact Us</a></li>
+                                    <li><a href="#">Beranda</a></li>
+                                    <li><a href="#">Profil</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                    <div class="col-lg-2 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>New Products</h4>
+                                <h4>Link Penting</h4>
                                 <ul>
-                                    <li><a href="#">Woman Cloth</a></li>
-                                    <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#"> Man Accessories</a></li>
-                                    <li><a href="#"> Rubber made Toys</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Support</h4>
-                                <ul>
-                                    <li><a href="#">Frequently Asked Questions</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Report a Payment Issue</a></li>
+                                    <li><a href="https://kalorize.com" target="_blank">Kalorize</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -168,23 +121,11 @@
                 </div>
                 <!-- Footer bottom -->
                 <div class="row align-items-center">
-                    <div class="col-xl-7 col-lg-8 col-md-7">
+                    <div class="col-12 d-flex">
                         <div class="footer-copy-right">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved | This template is made with <i
-                                    class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                    target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-4 col-md-5">
-                        <div class="footer-copy-right f-right">
                             <!-- social -->
                             <div class="footer-social">
+                                <h4>Social Media</h4>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-behance"></i></a>

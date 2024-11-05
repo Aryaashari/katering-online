@@ -87,13 +87,12 @@
             }
         }
          p{
-            font-size: 17px;
+            font-size: 20px;
             line-height: 1.6;
-            font-weight: 400;
+            font-weight: 500;
             margin-bottom: 39px;
             color: #212025;
-            margin-bottom: 60px;
-            padding-right: 50px;
+            text-align: center;
             @media #{$sm}{
                 padding-right: 0px;
                 margin-bottom: 30px;
@@ -112,13 +111,18 @@
 .slider-area{
     .hero-cap{
         & h2{
-            font-size: 70px;
+            font-size: 60px;
             font-weight: 700;
-            text-transform: capitalize;
             @media #{$xs}{
                 font-size: 28px;
             }
-
+        }
+        & p {
+            font-size: 20px;
+            font-weight: 500;
+            @media #{$xs}{
+                font-size: 14px;
+            }
         }
     }
 }

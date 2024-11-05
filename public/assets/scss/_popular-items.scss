@@ -5,8 +5,12 @@
             border-bottom: 3px solid #ff2020;
             margin-bottom:19px;
             position: relative;
+            height: 200px;
             img {
                 width:100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
                }
             //hover Show Smg
             .img-cap{

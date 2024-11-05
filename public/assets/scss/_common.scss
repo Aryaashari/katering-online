@@ -110,6 +110,9 @@ input:focus::-moz-placeholder {
 	text-transform: capitalize;
 }
 
+/* Text */
+
+
 
 /* Theme-overlay */
 .theme-overlay {
@@ -287,8 +290,8 @@ input:focus::-moz-placeholder {
 		box-shadow:none; 
 	}
 .hero-btn{
-	padding: 25px 29px;
-	background: #4a4a4b;
+	padding: 29px 25px;
+	background: #0B1C39;
 	&::before{
 		background: $theme-color;
 	}
@@ -1012,7 +1015,7 @@ input:focus::-moz-placeholder {
 
 
 
-		.section_tittle {
+		.section_title {
 			margin-bottom: 80px;
 
 			@media #{$tab} {
@@ -1135,7 +1138,7 @@ input:focus::-moz-placeholder {
 
 		@media #{$extra_big_screen} {
 			.container {
-				max-width: 1170px;
+				max-width: 1400px;
 			}
 		}
 

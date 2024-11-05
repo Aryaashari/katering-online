@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <!-- Hero Area Start-->
+        {{-- <!-- Hero Area Start-->
         <div class="slider-area ">
             <div class="single-slider slider-height2 d-flex align-items-center">
                 <div class="container">
@@ -16,21 +16,74 @@
                 </div>
             </div>
         </div>
-        <!-- Hero Area End-->
-        <!-- Latest Products Start -->
+        <!-- Hero Area End--> --}}
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-xl-12">
+                    <div class="slider-area">
+                        <div class="hero-cap text-center">
+                            <h2>Penuhi Kebutuhanmu di Telyu 👋</h2>
+                        </div>
+                        <div class="hero__caption">
+                            <p>"Dari katering, hingga seluruh kebutuhan harian kamu di Telkom University"</p>
+                        </div>
+                        <div class="hero__btn d-flex justify-content-center" data-animation="fadeInLeft" data-delay=".8s"
+                            data-duration="2000ms">
+                            <a href="#" class="btn hero-btn">Cek Disini</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-area mt-5">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-30">
+                            <div class="gallery-img big-img"
+                                style="background-image: url(assets/img/gallery/galeri1.png);"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
+                                <div class="single-gallery mb-30">
+                                    <div class="gallery-img small-img"
+                                        style="background-image: url(assets/img/gallery/galeri2.png);"></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
+                                <div class="single-gallery mb-30">
+                                    <div class="gallery-img small-img"
+                                        style="background-image: url(assets/img/gallery/galeri3.png);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
         <section class="popular-items latest-padding">
             <div class="container">
+                <div class="text-center">
+                    <h3>Bingun mau makan apa tiap hari?</h3>
+                    <div class="section_title">
+                        <h2 class="text-danger">Paket Katering</h2>
+                    </div>
+                </div>
                 <div class="tab-content" id="nav-tabContent">
                     <!-- card one -->
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="row">
                             @foreach ($paket as $item)
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                                     <div class="single-popular-items mb-50 text-center">
                                         <div class="popular-img">
-                                            <img src="{{ asset('storage'.'/'.$item->thumbnail) }}" alt="">
+                                            <img src="{{ asset('storage' . '/' . $item->thumbnail) }}" alt="">
                                             <div class="img-cap">
-                                                <a href="{{ url('paket').'/'.$item->slug }}">
+                                                <a href="{{ url('paket') . '/' . $item->slug }}">
                                                     <span>Lihat Paket</span>
                                                 </a>
                                             </div>
@@ -42,113 +95,6 @@
                                 </div>
                             @endforeach
 
-                        </div>
-                    </div>
-                    <!-- Card two -->
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="{{ asset('assets/img/gallery/popular1.png') }}" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="{{ asset('assets/img/gallery/popular2.png') }}" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="{{ asset('assets/img/gallery/popular3.png') }}" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="{{ asset('assets/img/gallery/popular4.png') }}" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="{{ asset('assets/img/gallery/popular5.png') }}" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-popular-items mb-50 text-center">
-                                    <div class="popular-img">
-                                        <img src="{{ asset('assets/img/gallery/popular6.png') }}" alt="">
-                                        <div class="img-cap">
-                                            <span>Add to cart</span>
-                                        </div>
-                                        <div class="favorit-items">
-                                            <span class="flaticon-heart"></span>
-                                        </div>
-                                    </div>
-                                    <div class="popular-caption">
-                                        <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                                        <span>$ 45,743</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
