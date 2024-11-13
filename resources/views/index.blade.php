@@ -1,22 +1,27 @@
 @extends('layouts.base')
 
+@push('css')
+    <style>
+        .price-text {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ED3237;
+        }
+
+        @media (max-width: 767.98px) {
+            .price-text {
+                font-size: 18px;
+            }
+
+            .popular-caption h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+@endpush
+
 @section('content')
     <main>
-        {{-- <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Daftar Paket</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End--> --}}
 
         <div class="container">
             <div class="row mt-4">
@@ -78,20 +83,28 @@
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="row">
                             @foreach ($paket as $item)
-                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                                    <div class="single-popular-items mb-50 text-center">
-                                        <div class="popular-img">
-                                            <img src="{{ asset('storage' . '/' . $item->thumbnail) }}" alt="">
-                                            <div class="img-cap">
-                                                <a href="{{ url('paket') . '/' . $item->slug }}">
-                                                    <span>Lihat Paket</span>
-                                                </a>
+                                <div class="col-xl-3 col-lg-3 col-6">
+                                    <a href="{{ url('paket') . '/' . $item->slug }}">
+                                        <div class="single-popular-items mb-50 text-center">
+                                            <div class="popular-img">
+                                                <img src="{{ asset('storage' . '/' . $item->thumbnail) }}" alt="">
+                                                <div class="img-cap">
+                                                    <a href="{{ url('paket') . '/' . $item->slug }}">
+                                                        <span>Lihat Paket</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="popular-caption">
+                                                <h3>{{ $item->nama_paket }}</h3>
+                                                @if (count($item->skema) > 0)
+                                                    <p class="price-text">Rp
+                                                        {{ number_format($item->skema[0]->pivot->harga, 0, ',', '.') }} /
+                                                        {{ $item->skema[0]->satuan }}
+                                                    </p>
+                                                @endif
                                             </div>
                                         </div>
-                                        <div class="popular-caption">
-                                            <h3>{{ $item->nama_paket }}</h3>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             @endforeach
 
