@@ -101,9 +101,29 @@
     }
 }
 .product_image_area{
-    margin-top: 150px;
     @media #{$tab}{
-        margin-top: -150px !important;
+        // margin-top: -150px !important;
+    }
+    .product_img_big {
+        margin-bottom: 10px;
+        img {
+            cursor: pointer;
+            width: 90%;
+            height: 400px;
+        }
+    }
+    .product_img_small {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        img {
+            cursor: pointer;
+            width: 33%;
+            height: 130px;
+        }
+        .img-lainnya {
+
+        }
     }
     .owl-nav{
         button.owl-prev, button.owl-next{
@@ -131,7 +151,7 @@
         }
     }
     .single_product_text{
-        margin: 100px 0 200px;
+        margin-left: 40px;
         @media #{$tab}{
             margin: 40px 0 70px;
         }
@@ -140,6 +160,7 @@
         }
         h3{
             font-size: 40px;
+            font-weight: bold;
             @media #{$tab}{
                 font-size: 25px;
                 br{
@@ -148,7 +169,6 @@
             }
         }
         p{
-            margin-top: 50px;
             color: #707070;
             @media #{$tab}{
                 margin-top:20px;

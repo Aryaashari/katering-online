@@ -150,8 +150,8 @@
     <script src="{{ asset('assets/js/jquery.slicknav.min.js') }}"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script> --}}
 
     <!-- One Page, Animated-HeadLin -->
     <script src="{{ asset('assets/js/wow.min.js') }}"></script>

@@ -40,8 +40,8 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img"
-                                style="background-image: url(assets/img/gallery/galeri1.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/galeri1.png);">
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-12">

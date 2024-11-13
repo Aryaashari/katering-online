@@ -10,9 +10,8 @@ class PaketController extends Controller
     
     public function detail(string $slug) {
         $paket = Paket::with('skema')->where('slug', $slug)->firstOrFail();
-        $foto = $paket->foto;
         
-        return view('detail-paket', compact('paket', 'foto'));
+        return view('detail-paket', compact('paket'));
     }
 
 }
