@@ -140,13 +140,18 @@
             <div class="container">
 
                 <div class="row">
+                    <div class="col-12 mb-4">
+                        <a href="{{ url('/') }}" style="color: #0B1C39; font-weight: 300; font-size: 24px"><img src="{{ asset('assets/img/icons/arrow-left.png') }}" alt="arrow-left" class="mr-3" width="30"> Kembali</a>
+                    </div>
                     <div class="col-md-6 col-lg-4 col-12">
                         <div class="product_img_big">
                             <img id="mainImg" src="{{ asset('storage' . '/' . $paket->thumbnail) }}" alt="main-img">
                         </div>
                         <div class="product_img_small">
-                            <img src="{{ asset('storage' . '/' . $paket->foto[0]) }}" class="thumb" data-index="0" alt="main-img">
-                            <img src="{{ asset('storage' . '/' . $paket->foto[1]) }}" class="thumb" data-index="1" alt="main-img">
+                            <img src="{{ asset('storage' . '/' . $paket->foto[0]) }}" class="thumb" data-index="0"
+                                alt="main-img">
+                            <img src="{{ asset('storage' . '/' . $paket->foto[1]) }}" class="thumb" data-index="1"
+                                alt="main-img">
                             <div class="img-lainnya"
                                 style="background-image: url(' {{ asset('storage' . '/' . $paket->foto[2]) }}')"
                                 id="showMore" data-index="2">
@@ -255,96 +260,6 @@
 
 
                     </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    {{-- <div class="col-lg-12">
-                        <div class="product_img_slide owl-carousel">
-
-                            @foreach ($foto as $item)
-                                <div class="single_product_img">
-                                    <img src="{{ asset('storage' . '/' . $item) }}" alt="#" class="img-fluid">
-                                </div>
-                            @endforeach
-                        </div>
-                    </div> --}}
-
-
-
-                    {{-- <div class="col-12">
-                        <h2 class="font-bold text-center">Skema Paket</h2>
-                    </div> --}}
-
-                    {{-- @foreach ($paket->skema as $skema)
-                        <div class="col-12 col-md-6">
-                            <div class="card">
-                                <div class="card-title">
-                                    <h3 class="text-center">{{ $skema->nama_skema }}</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p>{!! $skema->pivot->deskripsi !!}</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h4 class="text-center">Rp
-                                        {{ number_format($skema->pivot->harga, 0, ',', '.') }}/{{ $skema->satuan }}</h4>
-                                    <a href="#" class="btn btn-primary btn-block" data-toggle="modal"
-                                        data-target="#{{ $skema->nama_skema }}">Pesan {{ $skema->nama_skema }}</a>
-                                </div>
-                            </div>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="{{ $skema->nama_skema }}" tabindex="-1" role="dialog"
-                                aria-labelledby="{{ $skema->nama_skema }}Label" aria-hidden="true"
-                                style="z-index: 999999;">
-                                <div class="modal-dialog" role="document">
-                                    <form action="{{ url('/pesan') }}" method="POST">
-                                        @csrf
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="{{ $skema->nama_skema }}Label">Detail
-                                                    Pemesanan
-                                                </h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close" onclick="closeModal();">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <label>Pesan Untuk Berapa {{ $skema->satuan }}?</label>
-                                                        <div class="input-group mb-3">
-                                                            <input type="number" min="1" value="1"
-                                                                class="form-control" name="kuantitas"
-                                                                data-price="{{ $skema->pivot->harga }}" onchange="tes();"
-                                                                required>
-                                                            <div class="input-group-append">
-                                                                <span class="input-group-text"
-                                                                    id="basic-addon2">{{ $skema->satuan }}</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <label>Pilih Tanggal Mulai (Min h+2)</label>
-                                                        <input type="date" name="tanggal" class="form-control"
-                                                            required>
-                                                    </div>
-                                                    <input type="hidden" name="paket_id" value="{{ $paket->id }}">
-                                                    <input type="hidden" name="skema_id" value="{{ $skema->id }}">
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <h4>Rp {{ number_format($skema->pivot->harga, 0, ',', '.') }}</h4>
-                                                <button type="submit" class="btn btn-primary">Pesan</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach --}}
                 </div>
             </div>
         </div>

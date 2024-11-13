@@ -10351,4 +10351,9 @@ input:focus {
 
 body {
   background-color: #F5F5F5;
+}
+
+footer {
+  background-color: white;
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */

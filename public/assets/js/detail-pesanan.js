@@ -25,7 +25,7 @@ function bayar() {
                 return response.json();
             } else if (response.status === 404) {
                 throw new Error("Pesanan tidak ditemukan");
-            }  else if (response.status === 500) {
+            } else if (response.status === 500) {
                 throw new Error("Server error");
             } else {
                 throw new Error(`Unexpected error: ${response.text}`);
@@ -38,4 +38,16 @@ function bayar() {
         .catch((error) => {
             console.error("Error:", error);
         });
+}
+
+const tableLg = document.getElementById("table-lg");
+const tableSm = document.getElementById("table-sm");
+
+if (screen.width < 768) {
+    console.log("Mobile Device");
+    tableLg.classList.add("d-none");
+    tableSm.classList.remove("d-none");
+} else {
+    tableLg.classList.remove("d-none");
+    tableSm.classList.add("d-none");
 }

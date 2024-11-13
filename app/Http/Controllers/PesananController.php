@@ -36,6 +36,7 @@ class PesananController extends Controller
             "total_harga" => intval($paketSkema->harga)*intval($request->kuantitas),
             "total_periode_hari" => intval($skema->periode_hari)*intval($request->kuantitas),
             "tanggal_mulai" => $request->tanggal,
+            "satuan" => $skema->satuan,
             "status_order" => "NEW"
         ]);
 
