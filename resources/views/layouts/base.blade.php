@@ -59,7 +59,25 @@
                         <!-- Header Right -->
                         <div class="header-right">
                             <ul>
-                                <li> <a href="{{ url('/login') }}"><span class="flaticon-user"></span></a></li>
+                                @auth
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <span class="flaticon-user"></span>
+                                        </a>
+                                        <div class="dropdown-menu" style="left: -85px;" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ url('/pesan/riwayat') }}">Riwayat Pesanan</a>
+                                            <form action="{{ url('/logout') }}" method="post">
+                                                @csrf 
+                                                <button class="dropdown-item" type="submit">Keluar</button>
+                                            </form>
+                                            {{-- <a class="dropdown-item" href="{{ url('') }}">Keluar</a> --}}
+                                        </div>
+                                    </li>
+                                @else
+                                    <li><a href="{{ url('/login') }}"><span class="flaticon-user"></span></a></li>
+                                @endauth
                             </ul>
                         </div>
                     </div>
@@ -91,7 +109,9 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Platform kolaborasi antara Trengginas Jaya dengan Kalorize untuk menyediakan platform yang dapat memenuhi seluruh kebutuhan mahasiswa di Telkom University</p>
+                                        <p>Platform kolaborasi antara Trengginas Jaya dengan Kalorize untuk menyediakan
+                                            platform yang dapat memenuhi seluruh kebutuhan mahasiswa di Telkom
+                                            University</p>
                                     </div>
                                 </div>
                             </div>

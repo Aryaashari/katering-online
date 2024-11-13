@@ -2,25 +2,24 @@
 
 @section('title', 'Katering Online - Riwayat Pesanan')
 
+@push('css')
+    <style>
+        .table th {
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: rgb(31, 31, 31) !important;
+        }
+    </style>
+@endpush
+
 @section('content')
     <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Riwayat Pesanan</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--================Cart Area =================-->
-        <section class="cart_area section_padding">
+        <section class="cart_area">
             <div class="container">
+                <div class="single_product_text">
+                    <h3>Riwayat Pesanan</h3>
+                </div>
                 <div class="cart_inner">
                     <div class="table-responsive">
                         <table class="table">

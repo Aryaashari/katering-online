@@ -155,7 +155,7 @@
                             <div class="img-lainnya"
                                 style="background-image: url(' {{ asset('storage' . '/' . $paket->foto[2]) }}')"
                                 id="showMore" data-index="2">
-                                <p>5 lainnya</p>
+                                <p>{{ count($paket->foto)-2 }} lainnya</p>
                             </div>
                         </div>
 
