@@ -73,7 +73,7 @@
         <section class="popular-items latest-padding">
             <div class="container">
                 <div class="text-center">
-                    <h3>Bingun mau makan apa tiap hari?</h3>
+                    <h3>Bingung mau makan apa tiap hari?</h3>
                     <div class="section_title">
                         <h2 class="text-danger">Paket Katering</h2>
                     </div>

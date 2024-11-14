@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-12 mt-2">
+                    <div class="col-12 mt-2">
                         <h4>Status Pembayaran:
                             @if ($pesanan->pembayaran == null || $pesanan->pembayaran->status == 'new')
                                 <span class="badge badge-primary">BELUM MEMILIH PEMBAYARAN</span>
@@ -95,7 +95,7 @@
                                 <span class="badge badge-danger">PEMBAYARAN GAGAL</span>
                             @endif
                         </h4>
-                    </div> --}}
+                    </div>
                 </div>
 
                 <div class="row d-none" id="table-sm">
