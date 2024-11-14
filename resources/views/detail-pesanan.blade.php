@@ -58,8 +58,8 @@
                                             <th> <span>{{ $pesanan->nama_skema }}</span></th>
                                             <th> <span>Rp {{ number_format($pesanan->harga_satuan, 0, ',', '.') }}</span>
                                             </th>
-                                            <th> <span>{{ $pesanan->kuantitas }}x</span></th>
-                                            <th> <span>{{ $pesanan->kuantitas }} {{ $pesanan->satuan }}</span></th>
+                                            <th> <span>{{ $pesanan->kuantitas_periode }} orang</span></th>
+                                            <th> <span>{{ $pesanan->kuantitas_orang }} {{ $pesanan->satuan }}</span></th>
                                             <th> <span>Rp {{ number_format($pesanan->total_harga, 0, ',', '.') }}</span>
                                             </th>
                                         </tr>
@@ -124,14 +124,14 @@
                         <p class="title">Jumlah Orang</p>
                     </div>
                     <div class="col-6">
-                        <p>{{ $pesanan->kuantitas }}</p>
+                        <p>{{ $pesanan->kuantitas_orang }}</p>
                     </div>
 
                     <div class="col-6">
                         <p class="title">Periode</p>
                     </div>
                     <div class="col-6">
-                        <p>{{ $pesanan->kuantitas }} {{ $pesanan->periode }}</p>
+                        <p>{{ $pesanan->kuantitas_periode }} {{ $pesanan->periode }}</p>
                     </div>
 
                     <div class="col-6">

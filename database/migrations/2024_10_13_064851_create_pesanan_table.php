@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('nama_skema');
             $table->string('periode');
             $table->string('harga_satuan');
-            $table->unsignedInteger('kuantitas');
+            $table->unsignedInteger('kuantitas_periode');
+            $table->unsignedInteger('kuantitas_orang');
             $table->string('total_harga');
             $table->date('tanggal_mulai');
             $table->string('status_order');

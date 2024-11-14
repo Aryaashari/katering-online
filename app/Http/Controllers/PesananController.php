@@ -16,7 +16,8 @@ class PesananController extends Controller
     public function pesan(Request $request) {
         $request->validate(
             [
-                'kuantitas' => 'required|integer|min:1',
+                'kuantitas_periode' => 'required|integer|min:1',
+                'kuantitas_orang' => 'required|integer|min:1',
                 'tanggal' => 'required|date'
             ]
         );
@@ -32,8 +33,9 @@ class PesananController extends Controller
             "nama_skema" => $skema->nama_skema,
             "periode_hari" => $skema->periode_hari,
             "harga_satuan" => $paketSkema->harga,
-            "kuantitas" => $request->kuantitas,
-            "total_harga" => intval($paketSkema->harga)*intval($request->kuantitas),
+            "kuantitas_periode" => $request->kuantitas_periode,
+            "kuantitas_orang" => $request->kuantitas_orang,
+            "total_harga" => intval($paketSkema->harga)*intval($request->kuantitas_periode)*intval($request->kuantitas_orang),
             "total_periode_hari" => intval($skema->periode_hari)*intval($request->kuantitas),
             "tanggal_mulai" => $request->tanggal,
             "satuan" => $skema->satuan,

@@ -210,7 +210,7 @@
                                                     <label>Pesan Untuk Berapa {{ $skema->satuan }}?</label>
                                                     <div class="input-group mb-3">
                                                         <input type="number" min="1" value="1"
-                                                            class="form-control inputKuantitas" name="kuantitas"
+                                                            class="form-control inputKuantitas" name="kuantitas_periode"
                                                             data-price="{{ $skema->pivot->harga }}"
                                                             onchange="changeQuantity();" required>
                                                         <div class="input-group-append">
@@ -223,7 +223,7 @@
                                                     <label>Pesan Untuk Berapa Orang?</label>
                                                     <div class="input-group mb-3">
                                                         <input type="number" min="1" value="1"
-                                                            class="form-control inputKuantitasOrang" name="kuantitasOrang"
+                                                            class="form-control inputKuantitasOrang" name="kuantitas_orang"
                                                             onchange="changeQuantity();" required>
                                                         <div class="input-group-append">
                                                             <span class="input-group-text" id="basic-addon2">Orang</span>
