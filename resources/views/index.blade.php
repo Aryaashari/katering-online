@@ -35,7 +35,7 @@
                         </div>
                         <div class="hero__btn d-flex justify-content-center" data-animation="fadeInLeft" data-delay=".8s"
                             data-duration="2000ms">
-                            <a href="#" class="btn hero-btn">Cek Disini</a>
+                            <a href="#paket-katering" class="btn hero-btn">Cek Disini</a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <section class="popular-items latest-padding">
+        <section class="popular-items latest-padding" id="paket-katering">
             <div class="container">
                 <div class="text-center">
                     <h3>Bingung mau makan apa tiap hari?</h3>
