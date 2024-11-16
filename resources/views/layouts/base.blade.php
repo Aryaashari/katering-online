@@ -29,6 +29,16 @@
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <style>
+        .logo {
+            position: relative;
+        }
+
+        .logo a {
+            position: absolute;
+            top: -15px;
+        }
+    </style>
     @stack('css')
 </head>
 
@@ -53,8 +63,7 @@
                     <div class="menu-wrapper" style="padding-top: 20px; padding-bottom:20px;">
                         <!-- Logo -->
                         <div class="logo m-auto">
-                            <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/main-logo.png') }}"
-                                    alt="logo" width="120"></a>
+                            <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/main-logo.png') }}" alt="logo" width="120"></a>
                         </div>
                         <!-- Header Right -->
                         <div class="header-right">
@@ -67,9 +76,12 @@
                                             <span class="flaticon-user"></span>
                                         </a>
                                         <div class="dropdown-menu" style="left: -85px;" aria-labelledby="navbarDropdown">
+                                            @role('admin')
+                                                <a class="dropdown-item" href="{{ url('/admin') }}">Admin</a>
+                                            @endrole
                                             <a class="dropdown-item" href="{{ url('/pesan/riwayat') }}">Riwayat Pesanan</a>
                                             <form action="{{ url('/logout') }}" method="post">
-                                                @csrf 
+                                                @csrf
                                                 <button class="dropdown-item" type="submit">Keluar</button>
                                             </form>
                                             {{-- <a class="dropdown-item" href="{{ url('') }}">Keluar</a> --}}

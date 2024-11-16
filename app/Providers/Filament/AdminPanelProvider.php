@@ -23,9 +23,11 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->brandName('Home Page')
+            ->homeUrl('/')
             ->default()
             ->id('admin')
-            ->path('admin')
+            ->path(path: 'admin')
             ->colors([
                 'primary' => Color::Amber,
             ])
