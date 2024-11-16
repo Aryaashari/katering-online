@@ -145,7 +145,7 @@
                             <div class="footer-tittle">
                                 <h4>Navigasi</h4>
                                 <ul>
-                                    <li><a href="#">Beranda</a></li>
+                                    <li><a href="{{ url('/') }}">Beranda</a></li>
                                     <li><a href="#">Profil</a></li>
                                 </ul>
                             </div>
@@ -169,10 +169,9 @@
                             <!-- social -->
                             <div class="footer-social">
                                 <h4>Social Media</h4>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="https://wa.me/6285159165507" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/kalorize_official" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=umam@kalorize.com" target="_blank"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
