@@ -63,7 +63,8 @@
                     <div class="menu-wrapper" style="padding-top: 20px; padding-bottom:20px;">
                         <!-- Logo -->
                         <div class="logo m-auto">
-                            <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/main-logo.png') }}" alt="logo" width="120"></a>
+                            <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo/main-logo.png') }}"
+                                    alt="logo" width="120"></a>
                         </div>
                         <!-- Header Right -->
                         <div class="header-right">
@@ -88,7 +89,17 @@
                                         </div>
                                     </li>
                                 @else
-                                    <li><a href="{{ url('/login') }}"><span class="flaticon-user"></span></a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                            role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <span class="flaticon-user"></span>
+                                        </a>
+                                        <div class="dropdown-menu" style="left: -85px;" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
+                                            <a class="dropdown-item" href="{{ url('/register') }}">Daftar</a>
+                                        </div>
+                                    </li>
                                 @endauth
                             </ul>
                         </div>
