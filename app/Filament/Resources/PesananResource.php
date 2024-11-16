@@ -10,6 +10,7 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -75,11 +76,23 @@ class PesananResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->label('ID')
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('pengguna.name')
                     ->label('Nama Pengguna')
                     ->numeric()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('pengguna.telp')
+                    ->label('Telp')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('status_order')
+                    ->color(fn(string $state): string => match ($state) {
+                        'NEW' => 'gray',
+                        'PENDING' => 'warning',
+                        'PAID' => 'success',
+                        'FAILED' => 'danger',
+                    })
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('nama_paket')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('nama_skema')
@@ -90,7 +103,11 @@ class PesananResource extends Resource
                 Tables\Columns\TextColumn::make('harga_satuan')
                     ->money('IDR')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('kuantitas')
+                Tables\Columns\TextColumn::make('kuantitas_periode')
+                    ->suffix('x')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('kuantitas_orang')
                     ->suffix('x')
                     ->numeric()
                     ->sortable(),
@@ -102,14 +119,6 @@ class PesananResource extends Resource
                 Tables\Columns\TextColumn::make('tanggal_mulai')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('status_order')
-                    ->color(fn(string $state): string => match ($state) {
-                        'NEW' => 'gray',
-                        'PENDING' => 'warning',
-                        'SUCCESS' => 'success',
-                        'FAILED' => 'danger',
-                    })
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -118,15 +127,6 @@ class PesananResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-            ])
-            ->filters([
-                SelectFilter::make('status_order')
-                    ->options([
-                        'new' => 'New',
-                        'pending' => 'Pending',
-                        'success' => 'Success',
-                        'failed' => 'Failed',
-                    ])
             ])
             ->actions([])
             ->bulkActions([

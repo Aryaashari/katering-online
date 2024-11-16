@@ -76,6 +76,7 @@ class PaketResource extends Resource
                     ->directory('uploads/paket/foto')
                     ->required()
                     ->label('Foto-foto')
+                    ->minFiles(4)
                     ->columnSpanFull(),
 
                 Section::make('Skema Paket')
