@@ -178,9 +178,7 @@
                         <div class="single_product_text">
                             <h3>{{ $paket->nama_paket }}</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolor id, debitis
-                                nesciunt expedita suscipit assumenda, quam dolore nihil excepturi beatae voluptatibus nobis
-                                iure culpa! Autem deserunt accusamus exercitationem ratione.
+                                {{ $paket->deskripsi }}
                             </p>
 
 
