@@ -178,7 +178,7 @@
                         <div class="single_product_text">
                             <h3>{{ $paket->nama_paket }}</h3>
                             <p>
-                                {{ $paket->deskripsi }}
+                                {!! $paket->deskripsi !!}
                             </p>
 
 
