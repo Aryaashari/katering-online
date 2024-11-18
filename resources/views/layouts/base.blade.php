@@ -36,7 +36,8 @@
 
         .logo a {
             position: absolute;
-            top: -15px;
+            top: -16px;
+            left: -10px;
         }
     </style>
     @stack('css')
