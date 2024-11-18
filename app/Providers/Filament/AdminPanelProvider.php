@@ -24,6 +24,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->brandName('Home Page')
+            ->profile()
             ->homeUrl('/')
             ->default()
             ->id('admin')
