@@ -43,18 +43,6 @@
 </head>
 
 <body>
-    <!--? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="{{ asset('assets/img/logo/logo.png') }}" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Preloader Start -->
     <header style="margin-bottom:80px; background-color: white;">
         <!-- Header Start -->
         <div class="header-area">
@@ -96,7 +84,7 @@
                                             <span class="flaticon-user"></span>
                                         </a>
                                         <div class="dropdown-menu" style="left: -85px;" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
+                                            <a class="dropdown-item" href="{{ url('/login') }}">Masuk</a>
                                             <a class="dropdown-item" href="{{ url('/register') }}">Daftar</a>
                                         </div>
                                     </li>
