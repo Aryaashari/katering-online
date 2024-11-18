@@ -50,6 +50,10 @@
                                                 <div class="badge badge-warning" style="font-size: 16px">
                                                     {{ $item->status_order }}
                                                 </div>
+                                            @elseif ($item->status_order == 'PAID')
+                                                <div class="badge badge-success" style="font-size: 16px">
+                                                    {{ $item->status_order }}
+                                                </div>
                                             @else
                                                 <div class="badge badge-danger" style="font-size: 16px">
                                                     {{ $item->status_order }}

@@ -58,7 +58,7 @@ class PesananController extends Controller
     public function riwayat() {
         $user = Auth::user();
 
-        $pesanan = Pesanan::select(['id', 'nama_paket', 'nama_skema', 'status_order', 'created_at'])->where('pengguna_id', $user->id)->orderBy('created_at')->get();
+        $pesanan = Pesanan::select(['id', 'nama_paket', 'nama_skema', 'status_order', 'created_at'])->where('pengguna_id', $user->id)->orderBy('created_at', 'desc')->get();
 
         return view('riwayat-pesanan', compact('pesanan'));
     }
